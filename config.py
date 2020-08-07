@@ -7,16 +7,16 @@ class Config(object):
     CSRF_ENABLED = True
     SECRET_KEY = "no-one-will-figure-this-out"
 
-class ProductionConfig(object):
+class ProductionConfig(Config):
     DEBUG = False
 
-class StagingConfig(object):
+class StagingConfig(Config):
     DEBUG = True
     DEVELOPMENT = True
 
-class DevelopmentConfig(object):
+class DevelopmentConfig(Config):
     DEBUG = True
     DEVELOPMENT = True
 
-class TestingConfig(object):
+class TestingConfig(Config):
     TESTING = True
